@@ -1,14 +1,16 @@
 package test
 
 import (
+	"log"
 	"log/syslog"
 	"testing"
 )
 
 func TestSysLog(t *testing.T) {
-	sysLog, _ := syslog.New(syslog.LOG_NOTICE|syslog.LOG_LOCAL0, "mmmmd")
+	err := syslog.Dial("", "",syslog.LOG_ERR, "Saturday")
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	sysLog.Warning("Warning:helloworld")
-
-	sysLog.Close()
+	sysLog.Emerg("Hello world!")
 }

@@ -1,7 +1,19 @@
 package main
 
-func main() {
-	// 在控制台打印日志
+import (
+	"log"
+	"log/syslog"
+)
 
+func main() {
+	testSysLog()
 }
 
+func testSysLog() {
+	err := syslog.Dial("", "",syslog.LOG_ERR, "Saturday")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	sysLog.Emerg("Hello world!")
+}
