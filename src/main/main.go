@@ -1,18 +1,15 @@
 package main
 
-import (
-	"log"
-	"log/syslog"
-)
+import "fmt"
+
+func test(){
+	var b string = "Runoob"
+	b = "chenzhen"
+    fmt.Println(b)
+}
 
 func main() {
-	testSysLog()
+	test()
 }
 
-func testSysLog() {
-	sysLog, err := syslog.Dial("", "",syslog.LOG_ERR, "Saturday")
-	if err != nil {
-		log.Fatal(err)
-	}
-	sysLog.Emerg("Hello world!")
-}
+
