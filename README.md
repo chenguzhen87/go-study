@@ -13,6 +13,7 @@
 [go常用命令行命令](https://www.cnblogs.com/guotianbao/p/13365213.html)
 [vscode go插件安装不成功，解决办法](https://www.jianshu.com/p/4f2c476e189a)
 [Golang环境配置以及GOPATH与gomod的关系](https://blog.csdn.net/qq_15386973/article/details/107172344)
+[Golang实战-fmt包之 print 核心](https://zhuanlan.zhihu.com/p/370707755)
 
 
 
