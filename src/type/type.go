@@ -116,4 +116,8 @@ func main() {
 		fmt.Println(n,err)
 	}
 
+	for true {
+		fmt.Println(n,err)
+	}
+
 }
