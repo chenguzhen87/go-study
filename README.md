@@ -15,6 +15,8 @@
 [Golang环境配置以及GOPATH与gomod的关系](https://blog.csdn.net/qq_15386973/article/details/107172344)
 [Golang实战-fmt包之 print 核心](https://zhuanlan.zhihu.com/p/370707755)
 
+[如何确定一个 Go 变量会被分配在哪里？](https://blog.csdn.net/RA681t58CJxsgCkJ31/article/details/97064311)
+
 
 
 

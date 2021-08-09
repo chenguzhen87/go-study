@@ -31,25 +31,101 @@
 //	fmt.Printf("Area %f Perimeter %f", area, perimeter)
 //}
 
+//package main
+//
+//import "fmt"
+//
+//func rectProps(length, width float64) (area, perimeter float64) {
+//	area = length * width
+//	perimeter = (length + width) * 2
+//	return // 不需要明确指定返回值，默认返回 area, perimeter 的值
+//}
+//
+//func test() string {
+//	var s = `dddddd`
+//	fmt.Println(s)
+//	return `1`
+//}
+//
+//func main() {
+//	area, _ := rectProps(10, 5)
+//	t := test()
+//	fmt.Println(area, t)
+//}
+//
+
+// https://mp.weixin.qq.com/s/DeEuZcWqE-LzYS_sg9m-vQ
+//package main
+//
+//import (
+//	"fmt"
+//)
+//
+//func find(num int, nums ...int) {
+//	fmt.Printf("type of nums is %T\n", nums)
+//	found := false
+//	for i, v := range nums {
+//		if v == num {
+//			fmt.Println(num, "found at index", i, "in", nums)
+//			found = true
+//		}
+//	}
+//	if !found {
+//		fmt.Println(num, "not found in ", nums)
+//	}
+//	fmt.Printf("\n")
+//}
+//func main() {
+//	find(89, 89, 90, 95)
+//	find(45, 56, 67, 45, 90, 109)
+//	find(78, 38, 56, 98)
+//	find(87)
+//}
+
+
+//package main
+//
+//import (
+//	"fmt"
+//)
+//
+//func find(num int, nums... int) {
+//	fmt.Printf("type of nums is %T\n", nums)
+//	nums[2] = 100
+//	//nums = append(nums,200 )
+//	//nums[3] = 200 //panic: runtime error: index out of range [3] with length 3
+//	found := false
+//	for i, v := range nums {
+//		if v == num {
+//			fmt.Println(num, "found at index", i, "in", nums)
+//			found = true
+//		}
+//	}
+//	if !found {
+//		fmt.Println(num, "not found in ", nums)
+//	}
+//	fmt.Printf("\n")
+//}
+//func main() {
+//	nums := []int{89, 90, 95}
+//	find(89, nums...)
+//	fmt.Println("nums",nums)
+//}
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func rectProps(length, width float64) (area, perimeter float64) {
-	area = length * width
-	perimeter = (length + width) * 2
-	return // 不需要明确指定返回值，默认返回 area, perimeter 的值
-}
-
-func test() string {
-	var s = `dddddd`
+func change(s ...string) {
+	s[0] = "Go"
+	s = append(s, "playground")
 	fmt.Println(s)
-	return `1`
 }
 
 func main() {
-	area, _ := rectProps(10, 5)
-	t := test()
-	fmt.Println(area, t)
+	welcome := []string{"hello", "world"}
+	change(welcome...)
+	fmt.Println(welcome)
 }
-
