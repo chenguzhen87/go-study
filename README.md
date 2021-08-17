@@ -2,7 +2,7 @@
 [go语言中文网](http://c.biancheng.net/golang/)
 [通过例子学习Go标准库](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example)
 [Golang标准库文档](https://studygolang.com/pkgdoc)
-
+[Go语言圣经](https://books.studygolang.com/gopl-zh/)
 
 [go依赖下载代理网站](https://goproxy.io/zh/)
 [go依赖下载代理网站](https://goproxy.cn)
