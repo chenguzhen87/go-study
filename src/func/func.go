@@ -112,20 +112,42 @@
 //	fmt.Println("nums",nums)
 //}
 
+//package main
+//
+//import (
+//	"fmt"
+//)
+//
+//func change(s ...string) {
+//	s[0] = "Go"
+//	s = append(s, "playground")
+//	fmt.Println(s)
+//}
+//
+//func main() {
+//	welcome := []string{"hello", "world"}
+//	change(welcome...)
+//	fmt.Println(welcome)
+//}
+
 package main
 
-import (
-	"fmt"
-)
-
-func change(s ...string) {
-	s[0] = "Go"
-	s = append(s, "playground")
-	fmt.Println(s)
-}
+import "fmt"
 
 func main() {
-	welcome := []string{"hello", "world"}
-	change(welcome...)
-	fmt.Println(welcome)
+	a := []int{7, 8, 9}
+	fmt.Printf("%+v\n", a)
+	ap(a)
+	fmt.Printf("%+v\n", a)
+	app(a)
+	fmt.Printf("%+v\n", a)
+
+}
+
+func ap(a []int) {
+	a = append(a, 10)
+}
+
+func app(a []int) {
+	a[0] = 1
 }
