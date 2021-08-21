@@ -1,9 +1,18 @@
 package main
 
 import (
-	"github.com/beego/beego/v2/server/web"
+	"fmt"
+	"io/ioutil"
+	"net/http"
 )
 
 func main() {
-	web.Run()
+	resp, err := http.Get("https://www.baidu.com/")
+	if err != nil {
+		// handle error
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+
+	fmt.Println(body)
 }

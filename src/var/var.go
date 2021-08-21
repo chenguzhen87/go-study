@@ -143,3 +143,79 @@
 //
 //	fmt.Println(age)
 //}
+
+
+//package main
+//
+//import "fmt"
+//
+//func  f1(a int)  {
+//	a = 4
+//   fmt.Println(a)
+//}
+//
+//func main() {
+//	var a = 0
+//	f1(a)
+//	fmt.Println(a)
+//
+//}
+
+
+//package main
+//
+//import "fmt"
+//
+//func  f1(a *int)  {
+//	*a = 4
+//	fmt.Println(a)
+//}
+//
+//func main() {
+//	var a = 0
+//	f1(&a)
+//	fmt.Println(a)
+//
+//}
+
+//
+//package main
+//
+//import "fmt"
+//
+//type per struct {
+//	name string
+//	age int
+//}
+//
+//func  f1(p *per)  {
+//	*p = per{"limei",40}
+//	fmt.Println(p)
+//}
+//
+//func main() {
+//	var p = per{"chenzhen",30}
+//	f1(&p)
+//	fmt.Println(p)
+//}
+
+
+package main
+
+import "fmt"
+
+type per struct {
+	name string
+	age int
+}
+
+func  f1(p *per)  {
+	p.age = 40
+	fmt.Println(p)
+}
+
+func main() {
+	var p = per{"chenzhen",30}
+	f1(&p)
+	fmt.Println(p)
+}
