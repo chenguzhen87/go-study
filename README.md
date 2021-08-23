@@ -4,6 +4,8 @@
 [Golang标准库文档](https://studygolang.com/pkgdoc)
 [Go语言圣经](https://books.studygolang.com/gopl-zh/)
 
+[《Go Web 编程》 ](https://ifun.dev/goBook/)
+
 [go依赖下载代理网站](https://goproxy.io/zh/)
 [go依赖下载代理网站](https://goproxy.cn)
 

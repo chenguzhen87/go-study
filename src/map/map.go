@@ -168,3 +168,21 @@
 //	if map1 == map2 {
 //	}
 //}
+
+package main
+
+func main()  {
+   var m = map[string]int{"age": 1}
+   var a []int
+   var ch chan int
+   var s string = "陈"
+   println("len(m)",len(m))
+   println("len(a)",len(a))
+   println("len(ch)",len(ch))
+   println("len(s)",len(s)) // 字符串字节数
+
+   //println(cap(m)) map不能用cap
+   println("cap(a)",cap(a))
+   println("cap(ch)",cap(ch))
+   // println(cap(s)) // 字符串不能用cap
+}

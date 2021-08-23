@@ -129,25 +129,162 @@
 //	change(welcome...)
 //	fmt.Println(welcome)
 //}
+//
+//package main
+//
+//import "fmt"
+//
+//func main() {
+//	a := []int{7, 8, 9}
+//	fmt.Printf("%+v\n", a)
+//	ap(a)
+//	fmt.Printf("%+v\n", a)
+//	app(a)
+//	fmt.Printf("%+v\n", a)
+//
+//}
+//
+//func ap(a []int) {
+//	a = append(a, 10)
+//}
+//
+//func app(a []int) {
+//	a[0] = 1
+//}
+
+//package main
+//
+//import "fmt"
+//
+//func f1() (r int) {
+//	defer func() {
+//		r++
+//	}()
+//	return 0
+//}
+//
+//func f2() (r int) {
+//	t := 5
+//	defer func() {
+//		t = t + 5
+//	}()
+//	return t
+//}
+//
+//func f3() (r int) {
+//	defer func(r int) {
+//		r = r + 5
+//	}(r)
+//	return 1
+//}
+//
+//func f4() (int) {
+//	var r int = 0
+//	defer func(r int) {
+//		r = r + 5
+//	}(r)
+//	return 1
+//}
+//
+//func f5() (r int) {
+//
+//	// 1.赋值
+//	r = 4
+//
+//	// 2.闭包引用，返回值被修改
+//	defer func() {
+//		r++
+//	}()
+//
+//	// 3.空的 return
+//	return r
+//}
+//
+//
+//func main()  {
+//	f1 := f1()
+//	f2 := f2()
+//	f3 := f3()
+//	f4 := f4()
+//	f5 := f5()
+//	fmt.Println(f1)
+//	fmt.Println(f2)
+//	fmt.Println(f3)
+//	fmt.Println(f4)
+//	fmt.Println(f5)
+//}
+
+//package main
+//
+//import "fmt"
+//
+//type Person struct {
+//	age int
+//}
+//
+//func main() {
+//	person := &Person{28}
+//
+//	// 1.
+//	defer fmt.Println(person.age)
+//
+//	// 2.
+//	defer func(p *Person) {
+//		fmt.Println(p.age)
+//	}(person)
+//
+//	// 3.
+//	defer func() {
+//		fmt.Println(person.age)
+//	}()
+//
+//	person.age = 29
+//
+//
+//}
+
+//package main
+//
+//import "fmt"
+//
+//func main() {
+//
+//	s1 := []int{1, 2, 3}
+//	s2 := s1[1:]
+//	s2[1] = 4
+//	fmt.Println(s2)
+//	fmt.Println(s1)
+//	s2 = append(s2, 5, 6, 7)
+//	fmt.Println(s1)
+//	fmt.Println(s2)
+//}
+
+//package main
+//
+//import "fmt"
+//
+//func main() {
+//	m := map[int]string{0:"zero",1:"one"}
+//	for k,v := range m {
+//		fmt.Println(k,v)
+//	}
+//}
 
 package main
 
 import "fmt"
 
 func main() {
-	a := []int{7, 8, 9}
-	fmt.Printf("%+v\n", a)
-	ap(a)
-	fmt.Printf("%+v\n", a)
-	app(a)
-	fmt.Printf("%+v\n", a)
-
+	a := 1
+	b := 2
+	defer calc("1", a, calc("10", a, b))
+	a = 0
+	defer calc("2", a, calc("20", a, b))
+	b = 1
 }
 
-func ap(a []int) {
-	a = append(a, 10)
-}
-
-func app(a []int) {
-	a[0] = 1
+func calc(index string, a, b int) int {
+	ret := a + b
+	fmt.Println(index, a, b, ret)
+	return ret
 }

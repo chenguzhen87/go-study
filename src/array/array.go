@@ -6,7 +6,7 @@
 //)
 //
 //func main() {
-//	var a [3]int //int array with length 3
+//	var a = [3]int{1,4} //int array with length 3
 //	fmt.Println(a)
 //}
 
@@ -233,3 +233,30 @@
 //	cars = append(cars, "Toyota")
 //	fmt.Println("cars:", cars, "has new length", len(cars), "and capacity", cap(cars)) // capacity of cars is doubled to 6
 //}
+
+
+package main
+
+//import "fmt"
+//
+//func main() {
+//	slice := []int{1, 3, 5, 6, 8}
+//    s1 := slice[:2]
+//	s2 := slice[1:3]
+//	s3 := slice[:]
+//	s4 := slice[2:4:5]
+//	s5 := slice[1:1]
+//	// s4 := slice[2:4:6] 编译报错
+//	fmt.Println("s1",s1)
+//	fmt.Printf("s1---%v",cap(slice))
+//	fmt.Println()
+//	fmt.Println("s2",cap(s2))
+//	fmt.Println("s3",cap(s3))
+//	fmt.Println("s4",cap(s4))
+//	fmt.Println("s5",cap(s5))
+//	println(slice)
+//
+//	var m []int
+//	fmt.Println(m==nil)
+//}
+
